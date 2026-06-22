@@ -110,6 +110,7 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   display: grid;
   place-items: center;
   height: 240px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background:
     radial-gradient(circle at 50% 38%, rgba(242, 179, 90, 0.18), transparent 42%),
@@ -135,7 +136,13 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
+}
+.product-card-image.image-position-top {
+  object-position: center top;
+}
+.product-card-image.image-position-center {
+  object-position: center center;
 }
 .product-image-frame.is-missing::after {
   content: "";

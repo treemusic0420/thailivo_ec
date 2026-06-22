@@ -15,6 +15,7 @@ const products = [
     description: '毎日のリラックスタイムやサロン利用にうれしい大容量サイズ。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80',
+    imagePosition: 'image-position-top',
     paymentLink: 'https://buy.stripe.com/test_thailivo_herb_bath_600g',
   },
   {
@@ -33,6 +34,7 @@ const products = [
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
+    imagePosition: 'image-position-top',
     paymentLink: 'https://buy.stripe.com/test_thailivo_butterfly_pea',
   },
   {
@@ -42,6 +44,7 @@ const products = [
     description: 'すっきりとした飲み口で、日々のウェルネス習慣に寄り添うお茶。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80',
+    imagePosition: 'image-position-center',
     paymentLink: 'https://buy.stripe.com/test_thailivo_papaya_leaf',
   },
 ];
@@ -62,7 +65,7 @@ const escapeHtml = (value) =>
 const renderProductCard = (product) => `
   <article class="product-card">
     <div class="product-image-frame product-card-image-container">
-      <img class="product-card-image" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" loading="lazy" onerror="this.closest('.product-image-frame').classList.add('is-missing'); this.remove();" />
+      <img class="product-card-image ${escapeHtml(product.imagePosition ?? '')}" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" loading="lazy" onerror="this.closest('.product-image-frame').classList.add('is-missing'); this.remove();" />
     </div>
     <div class="product-body">
       <div>
