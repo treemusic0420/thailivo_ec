@@ -84,31 +84,35 @@ if (!app) {
 
 app.innerHTML = `
   <header class="site-header" aria-label="ThaiLivo site header">
-    <a class="logo" href="#top" aria-label="ThaiLivo home">ThaiLivo</a>
-    <nav aria-label="Main navigation">
-      <a href="#products">商品</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="ThaiLivo home">ThaiLivo</a>
+      <nav aria-label="Main navigation">
+        <a href="#products">商品</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Thai Lifestyle Select</p>
-        <h1>ThaiLivo</h1>
-        <h2>Curated Goods from Thailand</h2>
-        <p class="lead">タイで見つけたお茶・ハーブ・生活雑貨をお届けします</p>
-        <a class="primary-link" href="#products">商品を見る</a>
-      </div>
-      <div class="hero-card" aria-hidden="true">
-        <span>Herbs</span>
-        <span>Tea</span>
-        <span>Home</span>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Thai Lifestyle Select</p>
+          <h1>ThaiLivo</h1>
+          <h2>Curated Goods from Thailand</h2>
+          <p class="lead">タイで見つけたお茶・ハーブ・生活雑貨をお届けします</p>
+          <a class="primary-link" href="#products">商品を見る</a>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <span>Herbs</span>
+          <span>Tea</span>
+          <span>Home</span>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="products">
+    <section class="section container" id="products">
       <div class="section-heading">
         <p class="eyebrow">Products</p>
         <h2>タイの香りを、暮らしのそばに。</h2>
@@ -118,13 +122,13 @@ app.innerHTML = `
       </div>
     </section>
 
-    <section class="section about" id="about">
+    <section class="section container about" id="about">
       <p class="eyebrow">About</p>
       <h2>ThaiLivoについて</h2>
       <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
     </section>
 
-    <section class="section contact" id="contact">
+    <section class="section container contact" id="contact">
       <p class="eyebrow">Contact</p>
       <h2>お問い合わせ</h2>
       <p>商品やご注文に関するご相談はメールでお気軽にお問い合わせください。</p>
