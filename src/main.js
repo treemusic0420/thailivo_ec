@@ -127,67 +127,82 @@ document.getElementById('root').innerHTML = `
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container info-card grouped-info-card">
-        <div class="info-subsection">
-          <p class="eyebrow">About</p>
-          <h2>ThaiLivoについて</h2>
-          <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
-        </div>
-        <div class="info-subsection" aria-labelledby="trust-notice-title">
-          <p class="eyebrow">Secure Checkout</p>
-          <h2 id="trust-notice-title">安心してご購入いただけます</h2>
-          <p>お支払いはStripeの安全な決済ページで処理されます。</p>
-          <p>ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
-          <p class="trust-note">ご注文後、Stripeの決済完了メールが送信されます。</p>
-        </div>
+    <section class="section lower-info-area" id="about">
+      <div class="container lower-info-stack">
+        <article class="info-card about-trust-card">
+          <div class="about-trust-content">
+            <div class="info-subsection">
+              <p class="eyebrow">About</p>
+              <h2>ThaiLivoについて</h2>
+              <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
+            </div>
+            <div class="info-subsection" aria-labelledby="trust-notice-title">
+              <p class="eyebrow">Secure Checkout</p>
+              <h2 id="trust-notice-title">安心してご購入いただけます</h2>
+              <p>お支払いはStripeの安全な決済ページで処理されます。</p>
+              <p>ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
+              <p class="trust-note">ご注文後、Stripeの決済完了メールが送信されます。</p>
+            </div>
+          </div>
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <path d="M32 6 52 14v15c0 13.6-8.1 24.2-20 29-11.9-4.8-20-15.4-20-29V14L32 6Z" />
+              <path d="m23.5 31.5 5.6 5.6 12-13" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="info-card guide-card" id="legal">
+          <div class="guide-heading">
+            <p class="eyebrow">Information</p>
+            <h2>ご利用に関するご案内</h2>
+          </div>
+          <div class="guide-columns">
+            <section class="guide-column">
+              <p class="eyebrow">Legal</p>
+              <h3>特定商取引法に基づく表記</h3>
+              <dl class="legal-list compact-legal-list">
+                <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
+                <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
+                <div><dt>所在地</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+                <div><dt>電話番号</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+                <div><dt>お問い合わせ</dt><dd>お問い合わせフォームよりご連絡ください。</dd></div>
+                <div><dt>販売価格</dt><dd>各商品ページに表示された価格</dd></div>
+                <div><dt>商品代金以外の必要料金</dt><dd>送料が発生する場合があります。</dd></div>
+                <div><dt>支払方法</dt><dd>クレジットカード決済（Stripe）</dd></div>
+                <div><dt>支払時期</dt><dd>ご注文時に決済されます。</dd></div>
+                <div><dt>商品の引渡時期</dt><dd>ご注文確認後、通常3〜5営業日以内に発送いたします。</dd></div>
+                <div><dt>返品・交換</dt><dd>商品に不備がある場合を除き、原則として返品・交換はお受けしておりません。</dd></div>
+              </dl>
+            </section>
+            <section class="guide-column" id="shipping">
+              <p class="eyebrow">Shipping</p>
+              <h3>配送について</h3>
+              <p>ご注文確認後、通常3〜5営業日以内に発送いたします。</p>
+              <p>配送方法・送料はご注文内容により異なる場合があります。</p>
+              <p>発送後の配送状況については、必要に応じて個別にご案内いたします。</p>
+            </section>
+            <section class="guide-column" id="returns">
+              <p class="eyebrow">Returns</p>
+              <h3>返品・交換について</h3>
+              <p>食品・衛生用品を含む商品の性質上、お客様都合による返品・交換はお受けしておりません。</p>
+              <p>商品違い、破損、不良などがあった場合は、商品到着後7日以内にお問い合わせフォームよりご連絡ください。</p>
+              <p>確認のうえ、交換または返金にて対応いたします。</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="info-card contact-card" id="contact">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>お問い合わせ</h2>
+            <p>商品やご注文に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+          </div>
+          <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform?usp=dialog" target="_blank" rel="noreferrer">お問い合わせフォーム</a>
+        </article>
       </div>
     </section>
 
-    <section class="section legal-section" id="legal">
-      <div class="container legal-card grouped-info-card">
-        <div class="info-subsection">
-          <p class="eyebrow">Legal</p>
-          <h2>特定商取引法に基づく表記</h2>
-          <dl class="legal-list">
-            <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
-            <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
-            <div><dt>所在地</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
-            <div><dt>電話番号</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
-            <div><dt>お問い合わせ</dt><dd>お問い合わせフォームよりご連絡ください。</dd></div>
-            <div><dt>販売価格</dt><dd>各商品ページに表示された価格</dd></div>
-            <div><dt>商品代金以外の必要料金</dt><dd>送料が発生する場合があります。</dd></div>
-            <div><dt>支払方法</dt><dd>クレジットカード決済（Stripe）</dd></div>
-            <div><dt>支払時期</dt><dd>ご注文時に決済されます。</dd></div>
-            <div><dt>商品の引渡時期</dt><dd>ご注文確認後、通常3〜5営業日以内に発送いたします。</dd></div>
-            <div><dt>返品・交換</dt><dd>商品に不備がある場合を除き、原則として返品・交換はお受けしておりません。</dd></div>
-          </dl>
-        </div>
-        <div class="info-subsection policy-subsection" id="shipping">
-          <p class="eyebrow">Shipping</p>
-          <h2>配送について</h2>
-          <p>ご注文確認後、通常3〜5営業日以内に発送いたします。</p>
-          <p>配送方法・送料はご注文内容により異なる場合があります。</p>
-          <p>発送後の配送状況については、必要に応じて個別にご案内いたします。</p>
-        </div>
-        <div class="info-subsection policy-subsection" id="returns">
-          <p class="eyebrow">Returns</p>
-          <h2>返品・交換について</h2>
-          <p>食品・衛生用品を含む商品の性質上、お客様都合による返品・交換はお受けしておりません。</p>
-          <p>商品違い、破損、不良などがあった場合は、商品到着後7日以内にお問い合わせフォームよりご連絡ください。</p>
-          <p>確認のうえ、交換または返金にて対応いたします。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container info-card">
-        <p class="eyebrow">Contact</p>
-        <h2>お問い合わせ</h2>
-        <p>商品やご注文に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
-        <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform?usp=dialog" target="_blank" rel="noreferrer">お問い合わせフォーム</a>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
