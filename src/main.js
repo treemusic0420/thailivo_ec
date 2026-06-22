@@ -135,12 +135,27 @@ document.getElementById('root').innerHTML = `
       </div>
     </section>
 
+    <section class="trust-notice-section" aria-labelledby="trust-notice-title">
+      <div class="container">
+        <div class="trust-notice">
+          <div>
+            <p class="eyebrow">Secure Checkout</p>
+            <h2 id="trust-notice-title">安心してご購入いただけます</h2>
+          </div>
+          <div class="trust-notice-copy">
+            <p>お支払いはStripeの安全な決済ページで処理されます。ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
+            <p class="trust-note">ご注文後、Stripeの決済完了メールが送信されます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="contact">
       <div class="container info-card">
         <p class="eyebrow">Contact</p>
         <h2>お問い合わせ</h2>
-        <p>商品やご注文に関するご相談はメールでお気軽にお問い合わせください。</p>
-        <a href="mailto:hello@thailivo.example">hello@thailivo.example</a>
+        <p>商品やご注文に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+        <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform?usp=dialog" target="_blank" rel="noreferrer">お問い合わせフォーム</a>
       </div>
     </section>
   </main>
