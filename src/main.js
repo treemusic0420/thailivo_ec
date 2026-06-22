@@ -32,7 +32,7 @@ const products = [
     price: '¥1,080',
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 16,
-    image: './assets/butterfly-pea-tea.svg',
+    image: './src/assets/butterfly-pea-tea.svg',
     paymentLink: 'https://buy.stripe.com/test_thailivo_butterfly_pea',
   },
   {
