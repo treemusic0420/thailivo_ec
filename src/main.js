@@ -159,7 +159,7 @@ const mainPageMarkup = `
           <a class="primary-link" href="#products">商品を見る</a>
         </div>
         <a class="hero-card" href="#products" aria-label="ThaiLivoの商品を見る">
-          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1000&q=80" alt="Thai lifestyle goods" />
+          <img src="https://images.unsplash.com/photo-1714241159015-fc7bd2fda53d?auto=format&fit=crop&w=1000&q=80" alt="タイ・メーホンソーンの茶畑と山あいの暮らし" />
           <div class="hero-tags" aria-hidden="true">
             <span>Herbs</span>
             <span>Tea</span>
@@ -189,6 +189,8 @@ const mainPageMarkup = `
               <p class="eyebrow">About</p>
               <h2>ThaiLivoについて</h2>
               <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
+              <p>現在取り扱っている商品は、タイハーブ商品の販売実績を持つ国内正規販売店から仕入れています。</p>
+              <p>初めての方にも安心してお買い物いただけるよう、品質と安全性を確認した商品のみを取り扱っています。</p>
             </div>
             <div class="info-subsection" aria-labelledby="trust-notice-title">
               <p class="eyebrow">Secure Checkout</p>
