@@ -90,7 +90,7 @@ const footerMarkup = `
         <a href="/legal">特定商取引法に基づく表記</a>
         <a href="/#shipping">配送について</a>
         <a href="/#returns">返品・交換について</a>
-        <a href="/#contact">お問い合わせフォーム</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
       </nav>
     </div>
   </footer>
@@ -235,7 +235,7 @@ const mainPageMarkup = `
             <h2>お問い合わせ</h2>
             <p>商品やご注文に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
           </div>
-          <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform?usp=dialog" target="_blank" rel="noreferrer">お問い合わせフォーム</a>
+          <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
         </article>
       </div>
     </section>
