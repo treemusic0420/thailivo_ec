@@ -111,7 +111,7 @@ const renderProductCard = (product) => `
         <strong>${escapeHtml(product.price)}</strong>
         <span>在庫数: ${product.stock}</span>
       </div>
-      <a class="buy-button" href="${escapeHtml(product.paymentLink)}" target="_blank" rel="noreferrer">購入する</a>
+      <a class="buy-button" href="${escapeHtml(product.paymentLink)}" target="_blank" rel="noreferrer">商品ページへ</a>
     </div>
   </article>
 `;
@@ -238,17 +238,19 @@ const mainPageMarkup = `
             </div>
             <div class="info-subsection" aria-labelledby="trust-notice-title">
               <p class="eyebrow">Secure Checkout</p>
-              <h2 id="trust-notice-title">安心してご購入いただけます</h2>
+              <div class="trust-heading-row">
+                <h2 id="trust-notice-title">安心してご購入いただけます</h2>
+                <div class="trust-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <path d="M32 6 52 14v15c0 13.6-8.1 24.2-20 29-11.9-4.8-20-15.4-20-29V14L32 6Z" />
+                    <path d="m23.5 31.5 5.6 5.6 12-13" />
+                  </svg>
+                </div>
+              </div>
               <p>お支払いはStripeの安全な決済ページで処理されます。</p>
               <p>ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
               <p class="trust-note">ご注文後、Stripeの決済完了メールが送信されます。</p>
             </div>
-          </div>
-          <div class="trust-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" focusable="false">
-              <path d="M32 6 52 14v15c0 13.6-8.1 24.2-20 29-11.9-4.8-20-15.4-20-29V14L32 6Z" />
-              <path d="m23.5 31.5 5.6 5.6 12-13" />
-            </svg>
           </div>
         </article>
 
