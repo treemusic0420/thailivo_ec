@@ -24,6 +24,7 @@ const products = [
     id: 3,
     name: 'レモングラス＆パンダンリーフティー 250g　※特価',
     price: '¥900',
+    originalPrice: '¥1,800',
     description: '爽やかなレモングラスと甘い香りのパンダンを合わせたノンカフェインティー。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=80',
@@ -34,6 +35,7 @@ const products = [
     id: 4,
     name: 'バタフライピーティー 250g　※特価',
     price: '¥1,090',
+    originalPrice: '¥2,180',
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?auto=compress&cs=tinysrgb&w=900',
@@ -97,6 +99,26 @@ const escapeHtml = (value) =>
 const renderHoverImage = (product) => product.hoverImage ? `
       <img class="product-card-image product-card-image-hover ${escapeHtml(product.hoverImagePosition ?? product.imagePosition ?? '')}" src="${escapeHtml(product.hoverImage)}" alt="" loading="lazy" decoding="async" width="900" height="675" aria-hidden="true" />` : '';
 
+const parsePrice = (price) => Number(price.replace(/[^0-9]/g, ''));
+
+const getDiscountPercentage = (originalPrice, salePrice) =>
+  Math.round(((parsePrice(originalPrice) - parsePrice(salePrice)) / parsePrice(originalPrice)) * 100);
+
+const renderProductPrice = (product) => {
+  const isSpecialPrice = product.name.includes('※特価') && product.originalPrice;
+
+  if (!isSpecialPrice) {
+    return `<strong>${escapeHtml(product.price)}</strong>`;
+  }
+
+  return `
+          <div class="discount-price" aria-label="特価: 通常価格 ${escapeHtml(product.originalPrice)}、販売価格 ${escapeHtml(product.price)}、${getDiscountPercentage(product.originalPrice, product.price)}%オフ">
+            <span class="original-price">${escapeHtml(product.originalPrice)}</span>
+            <strong class="sale-price">${escapeHtml(product.price)}</strong>
+            <span class="discount-badge">${getDiscountPercentage(product.originalPrice, product.price)}%OFF</span>
+          </div>`;
+};
+
 const renderProductCard = (product) => `
   <article class="product-card ${product.hoverImage ? 'product-card--has-hover' : ''}">
     <div class="product-image-frame product-card-image-container">
@@ -108,7 +130,7 @@ const renderProductCard = (product) => `
         <p class="description">${escapeHtml(product.description)}</p>
       </div>
       <div class="product-meta">
-        <strong>${escapeHtml(product.price)}</strong>
+        ${renderProductPrice(product)}
         <span>在庫数: ${product.stock}</span>
       </div>
       <a class="buy-button" href="${escapeHtml(product.paymentLink)}" target="_blank" rel="noreferrer">商品ページへ</a>
