@@ -188,9 +188,9 @@ const mainPageMarkup = `
             <div class="info-subsection">
               <p class="eyebrow">About</p>
               <h2>ThaiLivoについて</h2>
-              <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
-              <p>現在取り扱っている商品は、タイハーブ商品の販売実績を持つ国内正規販売店から仕入れています。</p>
-              <p>初めての方にも安心してお買い物いただけるよう、品質と安全性を確認した商品のみを取り扱っています。</p>
+              <p>ThaiLivoは、タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
+              <p>現在取り扱っている商品は、バンコク中心部でマッサージ店を展開する「at ease」系列のタイハーブ商品を中心に仕入れています。</p>
+              <p>現地で培われたハーブの知見をもとに作られた商品を、日々のリラックス時間に取り入れやすい形でお届けします。</p>
             </div>
             <div class="info-subsection" aria-labelledby="trust-notice-title">
               <p class="eyebrow">Secure Checkout</p>
