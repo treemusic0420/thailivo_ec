@@ -61,7 +61,9 @@ const escapeHtml = (value) =>
 
 const renderProductCard = (product) => `
   <article class="product-card">
-    <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" />
+    <div class="product-image-frame">
+      <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" loading="lazy" onerror="this.closest('.product-image-frame').classList.add('is-missing'); this.remove();" />
+    </div>
     <div class="product-body">
       <div>
         <h3>${escapeHtml(product.name)}</h3>
