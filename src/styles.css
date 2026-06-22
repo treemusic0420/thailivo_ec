@@ -414,7 +414,7 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   align-self: center;
   justify-self: end;
   color: #1d5b45;
-  opacity: 0.16;
+  opacity: 1;
 }
 .trust-icon svg {
   display: block;
