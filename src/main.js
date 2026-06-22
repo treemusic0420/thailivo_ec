@@ -35,6 +35,7 @@ const products = [
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
     imagePosition: 'image-position-top',
+    // Verified live Stripe URL. Keep uppercase L in fm5Lp4Rq04.
     paymentLink: 'https://buy.stripe.com/5kQ28jeHYf3E2fm5Lp4Rq04',
   },
   {
@@ -81,16 +82,10 @@ const renderProductCard = (product) => `
   </article>
 `;
 
-const app = document.querySelector('#root');
-
-if (!app) {
-  throw new Error('Root element #root was not found.');
-}
-
-app.innerHTML = `
-  <header class="site-header" aria-label="ThaiLivo site header">
+document.getElementById('root').innerHTML = `
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="ThaiLivo home">ThaiLivo</a>
+      <a class="logo" href="#top">ThaiLivo</a>
       <nav aria-label="Main navigation">
         <a href="#products">商品</a>
         <a href="#about">About</a>
@@ -109,35 +104,44 @@ app.innerHTML = `
           <p class="lead">タイで見つけたお茶・ハーブ・生活雑貨をお届けします</p>
           <a class="primary-link" href="#products">商品を見る</a>
         </div>
-        <a class="hero-card" href="#products" aria-label="商品一覧を見る">
-          <span>Herbs</span>
-          <span>Tea</span>
-          <span>Home</span>
+        <a class="hero-card" href="#products" aria-label="ThaiLivoの商品を見る">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1000&q=80" alt="Thai lifestyle goods" />
+          <div class="hero-tags" aria-hidden="true">
+            <span>Herbs</span>
+            <span>Tea</span>
+            <span>Home</span>
+          </div>
         </a>
       </div>
     </section>
 
-    <section class="section container" id="products">
-      <div class="section-heading">
-        <p class="eyebrow">Products</p>
-        <h2>タイの香りを、暮らしのそばに。</h2>
-      </div>
-      <div class="product-grid">
-        ${products.map(renderProductCard).join('')}
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Products</p>
+          <h2>タイの香りを、暮らしのそばに。</h2>
+        </div>
+        <div class="product-grid">
+          ${products.map(renderProductCard).join('')}
+        </div>
       </div>
     </section>
 
-    <section class="section container about" id="about">
-      <p class="eyebrow">About</p>
-      <h2>ThaiLivoについて</h2>
-      <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
+    <section class="section" id="about">
+      <div class="container info-card">
+        <p class="eyebrow">About</p>
+        <h2>ThaiLivoについて</h2>
+        <p>タイ在住経験を活かし、タイのライフスタイル商品を日本へ届ける小さなセレクトショップです。</p>
+      </div>
     </section>
 
-    <section class="section container contact" id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>お問い合わせ</h2>
-      <p>商品やご注文に関するご相談はメールでお気軽にお問い合わせください。</p>
-      <a href="mailto:hello@thailivo.example">hello@thailivo.example</a>
+    <section class="section" id="contact">
+      <div class="container info-card">
+        <p class="eyebrow">Contact</p>
+        <h2>お問い合わせ</h2>
+        <p>商品やご注文に関するご相談はメールでお気軽にお問い合わせください。</p>
+        <a href="mailto:hello@thailivo.example">hello@thailivo.example</a>
+      </div>
     </section>
   </main>
 `;
