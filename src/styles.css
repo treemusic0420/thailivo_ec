@@ -108,6 +108,69 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
 .section { padding-block: 4.5rem; }
 .section-heading { margin-bottom: 2rem; max-width: 100%; }
 .section-heading h2 { font-size: clamp(1.8rem, 4.6vw, 3.25rem); }
+
+.brand-story-card {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(122, 143, 100, 0.16);
+  border-radius: var(--card-radius);
+  background:
+    radial-gradient(circle at 10% 15%, rgba(245, 178, 71, 0.16), transparent 18rem),
+    rgba(255, 253, 248, 0.76);
+  box-shadow: 0 18px 45px rgba(63, 81, 62, 0.08);
+}
+.brand-story-copy h3 {
+  margin: 0;
+  color: #1d5b45;
+  font-size: clamp(1.55rem, 5vw, 2.35rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.brand-story-copy p:not(.eyebrow) {
+  margin: 1rem 0 0;
+  color: #53665c;
+  font-size: clamp(1rem, 2.5vw, 1.12rem);
+  line-height: 1.9;
+}
+.brand-story-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+.story-image-card {
+  position: relative;
+  min-height: 12rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: calc(var(--card-radius) - 10px);
+  background: #f4f0e5;
+  box-shadow: inset 0 0 0 1px rgba(255, 253, 248, 0.42);
+}
+.story-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  object-fit: cover;
+}
+.story-image-card figcaption {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.9rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.9);
+  color: #1d5b45;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(55, 88, 69, 0.12);
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -126,8 +189,7 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
 }
 .product-image-frame {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: block;
   height: 240px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -149,13 +211,27 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
 }
 .product-image-frame img,
 .product-card-image {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+.product-card-image-default {
+  opacity: 1;
+}
+.product-card-image-hover {
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .product-card--has-hover:hover .product-card-image-hover,
+  .product-image-frame:hover .product-card-image-hover {
+    opacity: 1;
+  }
 }
 .product-card-image.image-position-top {
   object-position: center top;
@@ -227,6 +303,10 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   .hero { min-height: clamp(450px, 54vh, 550px); padding: 3rem 0; }
   .hero-inner { grid-template-columns: 1.05fr 0.95fr; }
   .hero-card { min-height: clamp(20rem, 42vw, 26rem); }
+  .brand-story-card { padding: 1.5rem; }
+  .brand-story-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .story-image-card,
+  .story-image-card img { min-height: 11rem; }
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem; }
   .product-image-frame { height: 250px; }
   nav { gap: 1.5rem; }
@@ -238,9 +318,14 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   .hero { min-height: clamp(500px, 56vh, 640px); padding: 3.25rem 0; }
   .hero-card { min-height: clamp(22rem, 33vw, 30rem); }
   .section { padding-block: 5.25rem; }
+  .brand-story-card { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); align-items: center; padding: 2rem; }
+  .brand-story-gallery { gap: 1rem; }
+  .story-image-card,
+  .story-image-card img { min-height: 15rem; }
   .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
   .product-image-frame { height: 260px; }
 }
+
 
 .info-card,
 .legal-card {
