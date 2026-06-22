@@ -6,7 +6,7 @@ const products = [
     description: 'レモングラスやこぶみかんの葉を思わせる、深呼吸したくなるハーブバス。',
     stock: 5,
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
-    paymentLink: 'https://buy.stripe.com/test_thailivo_herb_bath_120g',
+    paymentLink: 'https://buy.stripe.com/7sY8wHfM26x807eg034Rq00',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     stock: 3,
     image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80',
     imagePosition: 'image-position-top',
-    paymentLink: 'https://buy.stripe.com/test_thailivo_herb_bath_600g',
+    paymentLink: 'https://buy.stripe.com/6oU14fczQ5t4aLSg034Rq02',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const products = [
     description: '爽やかなレモングラスと甘い香りのパンダンを合わせたノンカフェインティー。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=80',
-    paymentLink: 'https://buy.stripe.com/test_thailivo_lemongrass_pandan',
+    paymentLink: 'https://buy.stripe.com/bJe8wHgQ608KdY43dh4Rq03',
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const products = [
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
     imagePosition: 'image-position-top',
-    paymentLink: 'https://buy.stripe.com/test_thailivo_butterfly_pea',
+    paymentLink: 'https://buy.stripe.com/5kQ28jeHYf3E2fm5Lp4Rq04',
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const products = [
     stock: 3,
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80',
     imagePosition: 'image-position-center',
-    paymentLink: 'https://buy.stripe.com/test_thailivo_papaya_leaf',
+    paymentLink: 'https://buy.stripe.com/aFadR1dDU4p0g6c7tx4Rq01',
   },
 ];
 
