@@ -6,6 +6,7 @@ const products = [
     description: 'レモングラスやこぶみかんの葉を思わせる、深呼吸したくなるハーブバス。',
     stock: 5,
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=80',
     paymentLink: 'https://buy.stripe.com/7sY8wHfM26x807eg034Rq00',
   },
   {
@@ -15,6 +16,7 @@ const products = [
     description: '毎日のリラックスタイムやサロン利用にうれしい大容量サイズ。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
     imagePosition: 'image-position-top',
     paymentLink: 'https://buy.stripe.com/6oU14fczQ5t4aLSg034Rq02',
   },
@@ -25,6 +27,7 @@ const products = [
     description: '爽やかなレモングラスと甘い香りのパンダンを合わせたノンカフェインティー。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80',
     paymentLink: 'https://buy.stripe.com/bJe8wHgQ608KdY43dh4Rq03',
   },
   {
@@ -33,7 +36,8 @@ const products = [
     price: '¥1,090',
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 3,
-    image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
+    image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?auto=compress&cs=tinysrgb&w=900',
+    hoverImage: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=80',
     imagePosition: 'image-position-top',
     // Verified live Stripe URL.
     paymentLink: 'https://buy.stripe.com/6oU5kveHY1cOf28g034Rq05',
@@ -45,10 +49,37 @@ const products = [
     description: 'すっきりとした飲み口で、日々のウェルネス習慣に寄り添うお茶。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=900&q=80',
     imagePosition: 'image-position-center',
     paymentLink: 'https://buy.stripe.com/aFadR1dDU4p0g6c7tx4Rq01',
   },
 ];
+
+
+const brandStoryImages = [
+  {
+    src: 'https://atease-massage.com/wp2022/wp-content/uploads/assets/imgs/shop-03-241102.jpg',
+    alt: 'バンコク・スクンビットのat easeマッサージ店外観',
+    label: 'Bangkok Spa',
+  },
+  {
+    src: 'https://atease-massage.com/wp2022/wp-content/uploads/2022/05/herbfarm_img_07.jpg',
+    alt: 'タイ・スコータイにあるat easeの自社オーガニックハーブ農園',
+    label: 'Sukhothai Farm',
+  },
+  {
+    src: 'https://atease-massage.com/wp2022/wp-content/uploads/2022/05/herbfarm_img_03.jpg',
+    alt: '収穫されたタイハーブと原材料が入ったかご',
+    label: 'Thai Herbs',
+  },
+];
+
+const renderStoryImage = (image) => `
+  <figure class="story-image-card">
+    <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy" decoding="async" width="500" height="500" />
+    <figcaption>${escapeHtml(image.label)}</figcaption>
+  </figure>
+`;
 
 const escapeHtml = (value) =>
   value.replace(/[&<>'"]/g, (character) => {
@@ -63,10 +94,13 @@ const escapeHtml = (value) =>
     return entities[character];
   });
 
+const renderHoverImage = (product) => product.hoverImage ? `
+      <img class="product-card-image product-card-image-hover ${escapeHtml(product.hoverImagePosition ?? product.imagePosition ?? '')}" src="${escapeHtml(product.hoverImage)}" alt="" loading="lazy" decoding="async" width="900" height="675" aria-hidden="true" />` : '';
+
 const renderProductCard = (product) => `
-  <article class="product-card">
+  <article class="product-card ${product.hoverImage ? 'product-card--has-hover' : ''}">
     <div class="product-image-frame product-card-image-container">
-      <img class="product-card-image ${escapeHtml(product.imagePosition ?? '')}" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" loading="lazy" onerror="this.closest('.product-image-frame').classList.add('is-missing'); this.remove();" />
+      <img class="product-card-image product-card-image-default ${escapeHtml(product.imagePosition ?? '')}" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}の商品画像" loading="lazy" decoding="async" width="900" height="675" onerror="this.closest('.product-image-frame').classList.add('is-missing'); this.remove();" />${renderHoverImage(product)}
     </div>
     <div class="product-body">
       <div>
@@ -175,6 +209,16 @@ const mainPageMarkup = `
           <p class="eyebrow">Products</p>
           <h2>タイの香りを、暮らしのそばに。</h2>
         </div>
+        <article class="brand-story-card" aria-labelledby="brand-story-title">
+          <div class="brand-story-copy">
+            <p class="eyebrow">Brand Story</p>
+            <h3 id="brand-story-title">From Bangkok Spa to Your Home</h3>
+            <p>バンコクで人気のスパ「at ease」が、<br />タイ・スコータイの自社農園で育てたハーブをもとに作る商品を<br />日本へお届けします。</p>
+          </div>
+          <div class="brand-story-gallery" aria-label="at easeのスパ、農園、ハーブの写真">
+            ${brandStoryImages.map(renderStoryImage).join('')}
+          </div>
+        </article>
         <div class="product-grid">
           ${products.map(renderProductCard).join('')}
         </div>
