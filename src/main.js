@@ -110,7 +110,7 @@ const legalPageMarkup = `
 
   <main id="top" class="legal-page">
     <section class="section legal-page-section">
-      <div class="container legal-page-container">
+      <div class="container">
         <article class="info-card legal-page-card">
           <p class="eyebrow">Legal</p>
           <h1>特定商取引法に基づく表記</h1>
