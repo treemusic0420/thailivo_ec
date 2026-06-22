@@ -265,7 +265,8 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-#about .info-card h2 {
+.info-card h2,
+.legal-card h2 {
   font-size: clamp(1.35rem, 5vw, 2rem);
 }
 
