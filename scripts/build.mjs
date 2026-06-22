@@ -12,3 +12,4 @@ const html = await readFile(join(root, 'index.html'), 'utf8');
 await writeFile(join(dist, 'index.html'), html.replace('/src/main.js', './src/main.js'));
 await cp(join(root, 'src', 'main.js'), join(dist, 'src', 'main.js'));
 await cp(join(root, 'src', 'styles.css'), join(dist, 'src', 'styles.css'));
+await cp(join(root, 'src', 'assets'), join(dist, 'src', 'assets'), { recursive: true });
