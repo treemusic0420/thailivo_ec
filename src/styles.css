@@ -299,6 +299,13 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
 .legal-page-section {
   padding-block: 3.5rem 4.5rem;
 }
+.info-card.legal-page-card {
+  padding: 1.5rem;
+}
+.info-card.legal-page-card > * {
+  margin-left: 0;
+  margin-right: 0;
+}
 .legal-page-card h2 {
   margin: 0;
   color: #1d5b45;
@@ -356,6 +363,9 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
   .legal-list div {
     grid-template-columns: minmax(12rem, 0.34fr) 1fr;
     gap: 1.5rem;
+  }
+  .info-card.legal-page-card {
+    padding: 2rem;
   }
   .footer-inner {
     grid-template-columns: auto 1fr;
