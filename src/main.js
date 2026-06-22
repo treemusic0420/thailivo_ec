@@ -113,7 +113,7 @@ const legalPageMarkup = `
       <div class="container">
         <article class="info-card legal-page-card">
           <p class="eyebrow">Legal</p>
-          <h1>特定商取引法に基づく表記</h1>
+          <h2>特定商取引法に基づく表記</h2>
           <dl class="legal-list">
             <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
             <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
