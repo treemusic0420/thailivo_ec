@@ -143,7 +143,8 @@ document.getElementById('root').innerHTML = `
             <h2 id="trust-notice-title">安心してご購入いただけます</h2>
           </div>
           <div class="trust-notice-copy">
-            <p>お支払いはStripeの安全な決済ページで処理されます。ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
+            <p>お支払いはStripeの安全な決済ページで処理されます。</p>
+            <p>ThaiLivoのサイト上ではクレジットカード情報を保持しません。</p>
             <p class="trust-note">ご注文後、Stripeの決済完了メールが送信されます。</p>
           </div>
         </div>
@@ -158,5 +159,57 @@ document.getElementById('root').innerHTML = `
         <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdMxKoclv4u-umM-q7FbxdrvCK5RcTDRU20Jr6PiLBb3nJLMA/viewform?usp=dialog" target="_blank" rel="noreferrer">お問い合わせフォーム</a>
       </div>
     </section>
+
+    <section class="section legal-section" id="legal">
+      <div class="container legal-card">
+        <p class="eyebrow">Legal</p>
+        <h2>特定商取引法に基づく表記</h2>
+        <dl class="legal-list">
+          <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
+          <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
+          <div><dt>所在地</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+          <div><dt>電話番号</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+          <div><dt>お問い合わせ</dt><dd>お問い合わせフォームよりご連絡ください。</dd></div>
+          <div><dt>販売価格</dt><dd>各商品ページに表示された価格</dd></div>
+          <div><dt>商品代金以外の必要料金</dt><dd>送料が発生する場合があります。</dd></div>
+          <div><dt>支払方法</dt><dd>クレジットカード決済（Stripe）</dd></div>
+          <div><dt>支払時期</dt><dd>ご注文時に決済されます。</dd></div>
+          <div><dt>商品の引渡時期</dt><dd>ご注文確認後、通常3〜5営業日以内に発送いたします。</dd></div>
+          <div><dt>返品・交換</dt><dd>商品に不備がある場合を除き、原則として返品・交換はお受けしておりません。</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section policy-section" id="shipping">
+      <div class="container info-card">
+        <p class="eyebrow">Shipping</p>
+        <h2>配送について</h2>
+        <p>ご注文確認後、通常3〜5営業日以内に発送いたします。</p>
+        <p>配送方法・送料はご注文内容により異なる場合があります。</p>
+        <p>発送後の配送状況については、必要に応じて個別にご案内いたします。</p>
+      </div>
+    </section>
+
+    <section class="section policy-section" id="returns">
+      <div class="container info-card">
+        <p class="eyebrow">Returns</p>
+        <h2>返品・交換について</h2>
+        <p>食品・衛生用品を含む商品の性質上、お客様都合による返品・交換はお受けしておりません。</p>
+        <p>商品違い、破損、不良などがあった場合は、商品到着後7日以内にお問い合わせフォームよりご連絡ください。</p>
+        <p>確認のうえ、交換または返金にて対応いたします。</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-logo" href="#top">ThaiLivo</a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#legal">特定商取引法に基づく表記</a>
+        <a href="#shipping">配送について</a>
+        <a href="#returns">返品・交換について</a>
+        <a href="#contact">お問い合わせフォーム</a>
+      </nav>
+    </div>
+  </footer>
 `;
