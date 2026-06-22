@@ -32,7 +32,7 @@ const products = [
     price: '¥1,080',
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 16,
-    image: 'https://images.unsplash.com/photo-1607006483224-ff6d44e93a1a?auto=format&fit=crop&w=900&q=80',
+    image: './assets/butterfly-pea-tea.svg',
     paymentLink: 'https://buy.stripe.com/test_thailivo_butterfly_pea',
   },
   {
@@ -106,11 +106,11 @@ app.innerHTML = `
           <p class="lead">タイで見つけたお茶・ハーブ・生活雑貨をお届けします</p>
           <a class="primary-link" href="#products">商品を見る</a>
         </div>
-        <div class="hero-card" aria-hidden="true">
+        <a class="hero-card" href="#products" aria-label="商品一覧を見る">
           <span>Herbs</span>
           <span>Tea</span>
           <span>Home</span>
-        </div>
+        </a>
       </div>
     </section>
 
