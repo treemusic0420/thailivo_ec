@@ -35,8 +35,8 @@ const products = [
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
     imagePosition: 'image-position-top',
-    // Verified live Stripe URL. Keep uppercase L in fm5Lp4Rq04.
-    paymentLink: 'https://buy.stripe.com/5kQ28jeHYf3E2fm5Lp4Rq04',
+    // Verified live Stripe URL.
+    paymentLink: 'https://buy.stripe.com/6oU5kveHY1cOf28g034Rq05',
   },
   {
     id: 5,
