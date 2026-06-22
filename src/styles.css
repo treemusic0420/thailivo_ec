@@ -257,6 +257,32 @@ h2 { margin: 0; font-size: clamp(1.7rem, 8vw, 3.5rem); line-height: 1.05; letter
 .description { margin: 0; color: #5c6b62; line-height: 1.7; }
 .product-meta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; color: #53665c; }
 .product-meta strong { color: #bd6d24; font-size: 1.2rem; }
+.discount-price {
+  display: grid;
+  gap: 0.18rem;
+  align-items: start;
+}
+.original-price {
+  color: #8a9a90;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.08em;
+}
+.sale-price {
+  line-height: 1.15;
+}
+.discount-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.18rem 0.48rem;
+  background: rgba(242, 179, 90, 0.2);
+  color: #9f5f24;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
 .buy-button { width: 100%; padding: 0 1rem; background: #f2b35a; color: #213b31; box-shadow: 0 12px 24px rgba(197, 121, 43, 0.2); }
 
 .about, .contact {
