@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: 'タイハーブのお風呂 120g',
-    price: '¥1,280',
+    price: '¥600',
     description: 'レモングラスやこぶみかんの葉を思わせる、深呼吸したくなるハーブバス。',
     stock: 5,
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80',
@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     name: 'タイハーブのお風呂 業務用600g',
-    price: '¥4,980',
+    price: '¥2,390',
     description: '毎日のリラックスタイムやサロン利用にうれしい大容量サイズ。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80',
@@ -20,7 +20,7 @@ const products = [
   {
     id: 3,
     name: 'レモングラス＆パンダンリーフティー',
-    price: '¥980',
+    price: '¥900',
     description: '爽やかなレモングラスと甘い香りのパンダンを合わせたノンカフェインティー。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=80',
@@ -29,7 +29,7 @@ const products = [
   {
     id: 4,
     name: 'バタフライピーティー',
-    price: '¥1,080',
+    price: '¥1,090',
     description: '鮮やかな青色が美しい、タイらしい彩りを楽しめるハーブティー。',
     stock: 3,
     image: 'https://images.pexels.com/photos/34439027/pexels-photo-34439027.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-34439027.jpg&fm=jpg',
@@ -38,7 +38,7 @@ const products = [
   {
     id: 5,
     name: 'パパイヤ葉茶',
-    price: '¥1,180',
+    price: '¥2,190',
     description: 'すっきりとした飲み口で、日々のウェルネス習慣に寄り添うお茶。',
     stock: 3,
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80',
