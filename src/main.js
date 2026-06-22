@@ -82,7 +82,61 @@ const renderProductCard = (product) => `
   </article>
 `;
 
-document.getElementById('root').innerHTML = `
+const footerMarkup = `
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-logo" href="/">ThaiLivo</a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/legal">特定商取引法に基づく表記</a>
+        <a href="/#shipping">配送について</a>
+        <a href="/#returns">返品・交換について</a>
+        <a href="/#contact">お問い合わせフォーム</a>
+      </nav>
+    </div>
+  </footer>
+`;
+
+const legalPageMarkup = `
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">ThaiLivo</a>
+      <nav aria-label="Main navigation">
+        <a href="/">Top</a>
+        <a href="/#products">商品</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="legal-page">
+    <section class="section legal-page-section">
+      <div class="container legal-page-container">
+        <article class="info-card legal-page-card">
+          <p class="eyebrow">Legal</p>
+          <h1>特定商取引法に基づく表記</h1>
+          <dl class="legal-list">
+            <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
+            <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
+            <div><dt>所在地</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+            <div><dt>電話番号</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
+            <div><dt>お問い合わせ</dt><dd>お問い合わせフォームよりご連絡ください。</dd></div>
+            <div><dt>販売価格</dt><dd>各商品ページに表示された価格</dd></div>
+            <div><dt>商品代金以外の必要料金</dt><dd>送料が発生する場合があります。</dd></div>
+            <div><dt>支払方法</dt><dd>クレジットカード決済（Stripe）</dd></div>
+            <div><dt>支払時期</dt><dd>ご注文時に決済されます。</dd></div>
+            <div><dt>商品の引渡時期</dt><dd>ご注文確認後、通常3〜5営業日以内に発送いたします。</dd></div>
+            <div><dt>返品・交換</dt><dd>商品に不備がある場合を除き、原則として返品・交換はお受けしておりません。</dd></div>
+          </dl>
+          <a class="primary-link back-to-top-link" href="/">トップページへ戻る</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  ${footerMarkup}
+`;
+
+const mainPageMarkup = `
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#top">ThaiLivo</a>
@@ -152,29 +206,12 @@ document.getElementById('root').innerHTML = `
           </div>
         </article>
 
-        <article class="info-card guide-card" id="legal">
+        <article class="info-card guide-card">
           <div class="guide-heading">
             <p class="eyebrow">Information</p>
             <h2>ご利用に関するご案内</h2>
           </div>
           <div class="guide-columns">
-            <section class="guide-column">
-              <p class="eyebrow">Legal</p>
-              <h3>特定商取引法に基づく表記</h3>
-              <dl class="legal-list compact-legal-list">
-                <div><dt>販売事業者</dt><dd>ThaiLivo</dd></div>
-                <div><dt>運営責任者</dt><dd>藤田 正</dd></div>
-                <div><dt>所在地</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
-                <div><dt>電話番号</dt><dd>ご請求があった場合、遅滞なく開示いたします。</dd></div>
-                <div><dt>お問い合わせ</dt><dd>お問い合わせフォームよりご連絡ください。</dd></div>
-                <div><dt>販売価格</dt><dd>各商品ページに表示された価格</dd></div>
-                <div><dt>商品代金以外の必要料金</dt><dd>送料が発生する場合があります。</dd></div>
-                <div><dt>支払方法</dt><dd>クレジットカード決済（Stripe）</dd></div>
-                <div><dt>支払時期</dt><dd>ご注文時に決済されます。</dd></div>
-                <div><dt>商品の引渡時期</dt><dd>ご注文確認後、通常3〜5営業日以内に発送いたします。</dd></div>
-                <div><dt>返品・交換</dt><dd>商品に不備がある場合を除き、原則として返品・交換はお受けしておりません。</dd></div>
-              </dl>
-            </section>
             <section class="guide-column" id="shipping">
               <p class="eyebrow">Shipping</p>
               <h3>配送について</h3>
@@ -205,15 +242,7 @@ document.getElementById('root').innerHTML = `
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="footer-logo" href="#top">ThaiLivo</a>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#legal">特定商取引法に基づく表記</a>
-        <a href="#shipping">配送について</a>
-        <a href="#returns">返品・交換について</a>
-        <a href="#contact">お問い合わせフォーム</a>
-      </nav>
-    </div>
-  </footer>
+  ${footerMarkup}
 `;
+
+document.getElementById('root').innerHTML = window.location.pathname.replace(/\/$/, '') === '/legal' ? legalPageMarkup : mainPageMarkup;
